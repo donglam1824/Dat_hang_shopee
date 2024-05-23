@@ -1,0 +1,12 @@
+trang web có các box để người mua nhập thông tin
+    - tên sản phẩm
+    - loại sản phẩm cụ thể
+    - giá bán
+    - số lượng
+    - tên shop
+
+nhấn gửi
+xây dựng trang admin khác trang admin mặc định của django
+    - admin xem yêu cầu của người mua
+    - đúng thì lưu vào database
+    - sai thì từ chối
