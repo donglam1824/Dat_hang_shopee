@@ -7,12 +7,48 @@
         <title>Thêm sản phẩm</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="staticfiles\style.css">
+        <link rel="stylesheet" href="static\style.css">
     </head>
     <body>
-        <form method="post" enctype="multipart/form-data"> 
-            {% csrf_token %}  
-            {{ form.as_p }}  
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %} 
+    
+            {% if form.errors %}
+                <p class="error">Vui lòng sửa các lỗi sau:</p>
+                <ul>
+                    {% for field in form %}
+                        {% if field.errors %}
+                            <li>{{ field.label }}: {{ field.errors|striptags }}</li> 
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+    
+            <div class="form-group">
+                {{ form.ten_san_pham.label_tag }}
+                {{ form.ten_san_pham }}
+            </div>
+            
+            <div class="form-group">
+                {{ form.gia_ban.label_tag }}
+                {{ form.gia_ban }}
+            </div>
+            
+            <div class="form-group">
+                {{ form.so_luong.label_tag }}
+                {{ form.so_luong }}
+            </div>
+            
+            <div class="form-group">
+                {{ form.anh.label_tag }}
+                {{ form.anh }}
+            </div>
+            
+            <div class="form-group">
+                {{ form.ten_shop.label_tag }}
+                {{ form.ten_shop }}
+            </div>
+    
             <button type="submit">Thêm Mặt Hàng</button>
         </form>
             

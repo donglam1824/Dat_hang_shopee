@@ -5,8 +5,13 @@ trang web có các box để người mua nhập thông tin
     - số lượng
     - tên shop
 
+hiện màn hình thông báo nhập thiếu
+
 nhấn gửi
 xây dựng trang admin khác trang admin mặc định của django
     - admin xem yêu cầu của người mua
     - đúng thì lưu vào database
     - sai thì từ chối
+
+phân quyền truy cập các urls khác nhau cho các user khác nhau
+

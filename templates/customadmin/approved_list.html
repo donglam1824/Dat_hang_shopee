@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static\list_style.css">
+</head>
+<body>
+    <h2>Sản phẩm đã được phê duyệt</h2>
+
+    {% if products %}
+        <div class="results">
+            {% for product in products %}
+                <div class="result-item">
+                    {% if product.anh %}
+                        <img src="{{ product.anh.url }}" alt="{{ product.ten_san_pham }}">
+                    {% endif %}
+                    <h3>{{ product.ten_san_pham }}</h3>
+                    <p>Giá bán: {{ product.gia_ban }}</p>
+                    <p>Số lượng: {{ product.so_luong }}</p>
+                    <p>Shop: {{ product.ten_shop }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>Không có sản phẩm nào.</p>
+    {% endif %}
+</body>
+</html>

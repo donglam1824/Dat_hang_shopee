@@ -1,0 +1,15 @@
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tự động điều chỉnh số cột */
+    gap: 20px;
+}
+.result-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+}
+.result-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}

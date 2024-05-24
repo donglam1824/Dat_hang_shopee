@@ -13,3 +13,9 @@ class SanPhamForm(forms.ModelForm):
             'so_luong': 'Số lượng',
             'ten_shop': 'Tên shop',
         }
+        widgets = {
+            'ten_san_pham': forms.TextInput(attrs={'class': 'form-control'}),
+            'gia_ban': forms.NumberInput(attrs={'class': 'form-control'}),
+            'so_luong': forms.NumberInput(attrs={'class': 'form-control'}),
+            'ten_shop': forms.TextInput(attrs={'class': 'form-control'}),
+        }
